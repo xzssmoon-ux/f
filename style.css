@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Comfortaa', cursive;
+    background-color: #fce4ec; /* Мягкий розовый фон */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Угловые орнаменты (Бантики) */
+.corner {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path fill="%23ffb6c1" d="M50 0 C50 30 30 50 0 50 C30 50 50 70 50 100 C50 70 70 50 100 50 C70 50 50 30 50 0 Z"/></svg>');
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+}
+
+.top-left {
+    top: 10px;
+    left: 10px;
+    transform: rotate(45deg);
+}
+
+.bottom-right {
+    bottom: 10px;
+    right: 10px;
+    transform: rotate(-135deg);
+}
+
+.book {
+    width: 90%;
+    max-width: 400px;
+    height: 80vh;
+    max-height: 600px;
+    position: relative;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: background-color 0.5s ease;
+    border-radius: 20px;
+}
+
+.page.active {
+    display: flex;
+}
+
+/* Цвета страниц */
+#page1 { background-color: #ffffff; color: #333; }
+#page2 { background-color: #ffebf0; color: #333; } /* Нежно-розовый */
+#page3 { background-color: #1a1a1a; color: #fff; } /* Чёрный */
+#page4 { background-color: #e53935; color: #fff; } /* Красный */
+#page5 { background-color: #f3e5f5; color: #333; } /* Сиреневый */
+#page6 { background-color: #e0f7fa; color: #333; } /* Голубой */
+#page7 { background-color: #fff9c4; color: #333; } /* Жёлтый */
+#page8 { background-color: #dcedc8; color: #333; } /* Зелёный */
+#page9 { background-color: #f8bbd0; color: #333; } /* Розовый */
+#page10 { background-color: #b3e5fc; color: #333; } /* Небесный */
+#page11 { background-color: #ffccbc; color: #333; } /* Персиковый */
+#page12 { background-color: #c8e6c9; color: #333; } /* Салатовый */
+#page13 { background-color: #ffffff; color: #333; }
+
+.page-img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%; /* Круглые фото */
+    margin-bottom: 20px;
+    border: 4px solid #ffb6c1;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.compliment {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+h2, h3 {
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.ans-btn, .next-btn {
+    background-color: #ff6f91;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    margin: 8px;
+    width: 80%;
+    max-width: 250px;
+    font-family: 'Comfortaa', cursive;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.ans-btn:hover, .next-btn:hover {
+    background-color: #ff4d6d;
+    transform: scale(1.05);
+}
+
+input[type="text"] {
+    width: 80%;
+    padding: 12px;
+    border-radius: 30px;
+    border: 2px solid #ffb6c1;
+    font-family: 'Comfortaa', cursive;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    outline: none;
+    text-align: center;
+}
+
+#love-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+}
+
+#love-buttons .ans-btn {
+    width: auto;
+    padding: 8px 15px;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.poem {
+    font-size: 1rem;
+    line-height: 1.6;
+    font-style: italic;
+    margin-bottom: 20px;
+}
