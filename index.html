@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Для Даны ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Угловые орнаменты (Бантики) -->
+    <div class="corner top-left"></div>
+    <div class="corner bottom-right"></div>
+
+    <div class="book">
+        <!-- СТРАНИЦЫ 1-6: КОМПЛИМЕНТЫ -->
+        <div class="page active" id="page1">
+            <img src="images/photo1.jpg" alt="Фото 1" class="page-img">
+            <p class="compliment">Дана, твоя улыбка способна осветить даже самый хмурый день. Ты невероятно красива!</p>
+            <button class="next-btn" onclick="nextPage(2)">Дальше ➡️</button>
+        </div>
+
+        <div class="page" id="page2">
+            <img src="images/photo2.jpg" alt="Фото 2" class="page-img">
+            <p class="compliment">В твоих глазах можно утонуть. Ты как произведение искусства.</p>
+            <button class="next-btn" onclick="nextPage(3)">Дальше ➡️</button>
+        </div>
+
+        <div class="page" id="page3">
+            <img src="images/photo3.jpg" alt="Фото 3" class="page-img">
+            <p class="compliment">С тобой мир становится ярче и добрее. Ты — настоящее чудо.</p>
+            <button class="next-btn" onclick="nextPage(4)">Дальше ➡️</button>
+        </div>
+
+        <div class="page" id="page4">
+            <img src="images/photo4.jpg" alt="Фото 4" class="page-img">
+            <p class="compliment">У тебя самая милая и искренняя улыбка на свете.</p>
+            <button class="next-btn" onclick="nextPage(5)">Дальше ➡️</button>
+        </div>
+
+        <div class="page" id="page5">
+            <img src="images/photo5.jpg" alt="Фото 5" class="page-img">
+            <p class="compliment">Ты — мой любимый человек, и я счастлив, что ты есть.</p>
+            <button class="next-btn" onclick="nextPage(6)">Дальше ➡️</button>
+        </div>
+
+        <div class="page" id="page6">
+            <img src="images/photo6.jpg" alt="Фото 6" class="page-img">
+            <p class="compliment">Дана, ты самая лучшая. И это только начало...</p>
+            <button class="next-btn" onclick="nextPage(7)">Дальше ➡️</button>
+        </div>
+
+        <!-- СТРАНИЦА 7: ВОПРОСЫ (Игра) -->
+        <div class="page" id="page7">
+            <h2>Хочешь узнать, что будет дальше?</h2>
+            <button class="ans-btn" onclick="nextPage(8)">Да, конечно! 😍</button>
+            <button class="ans-btn" onclick="nextPage(8)">Нет 😏</button>
+        </div>
+
+        <!-- СТРАНИЦА 8: ВОПРОС 1 -->
+        <div class="page" id="page8">
+            <h2>1. Ты красивая?</h2>
+            <button class="ans-btn" onclick="handleAns(1, 'Да я красотка')">Да, я красотка 👑</button>
+            <button class="ans-btn" onclick="handleAns(1, 'Я няшная')">Я няшная 🐱</button>
+            <button class="ans-btn" onclick="handleAns(1, 'Нет')">Нет 🙅‍♀️</button>
+        </div>
+
+        <!-- СТРАНИЦА 9: ВОПРОС 2 -->
+        <div class="page" id="page9">
+            <h2 id="ans1-text"></h2>
+            <h3>2. Кто я для тебя?</h3>
+            <input type="text" id="whoAmI" placeholder="Напиши свой ответ...">
+            <button class="ans-btn" onclick="submitTextAns()">Отправить 💌</button>
+        </div>
+
+        <!-- СТРАНИЦА 10: ВОПРОС 3 -->
+        <div class="page" id="page10">
+            <h2>3. Ты мне доверяешь?</h2>
+            <button class="ans-btn" onclick="handleTrust(true)">Да ❤️</button>
+            <button class="ans-btn" onclick="handleTrust(false)">Нет 💔</button>
+        </div>
+
+        <!-- СТРАНИЦА 11: ВОПРОС 4 -->
+        <div class="page" id="page11">
+            <h2 id="trust-text"></h2>
+            <h3>4. Ты меня любишь?</h3>
+            <div id="love-buttons">
+                <!-- Кнопки генерируются в JS -->
+            </div>
+        </div>
+
+        <!-- СТРАНИЦА 12: ФИНАЛ -->
+        <div class="page" id="page12">
+            <h2 id="final-love-text"></h2>
+            <h3>Хочешь продолжить дальше?</h3>
+            <button class="ans-btn" onclick="nextPage(13)">Да, хочу! 🚀</button>
+            <button class="ans-btn" onclick="alert('Ну и ладно! 😜')">Нет</button>
+        </div>
+
+        <!-- СТРАНИЦА 13: СТИХ -->
+        <div class="page" id="page13">
+            <h2>Для тебя, Дана ❤️</h2>
+            <p class="poem">
+                Пусть у Даны всё будет классно,<br>
+                В душе — тепло, в делах — успех!<br>
+                Пусть каждый день горит прекрасно,<br>
+                А счастье обгоняет всех!<br><br>
+                Мечты пусть сбудутся любые,<br>
+                Дороги стелятся легко,<br>
+                И звёзды светят золотые<br>
+                К тебе на счастье высоко!
+            </p>
+            <p>От Славы.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
